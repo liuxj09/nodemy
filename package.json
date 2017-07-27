@@ -1,0 +1,40 @@
+{
+  "name": "nodemy",
+  "version": "1.0.1",
+  "description": "common module of node for mycaigou",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuxj09/nodemy.git"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "nunjucks"
+  ],
+  "author": "liuxj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuxj09/nodemy/issues"
+  },
+  "homepage": "https://github.com/liuxj09/nodemy#readme",
+  "dependencies": {
+    "debug": "^2.6.8",
+    "koa": "^2.2.0",
+    "koa-cookie": "^1.0.0",
+    "koa-liveload": "^0.0.2",
+    "koa-router": "^7.2.0",
+    "lodash": "^4.17.4",
+    "md5": "^2.2.1",
+    "mime": "^1.3.6",
+    "mime-db": "^1.28.0",
+    "mz": "^2.6.0",
+    "nodemy": "^1.0.0",
+    "nunjucks": "^3.0.1",
+    "request": "^2.81.0",
+    "require-dir": "^0.3.2"
+  }
+}
