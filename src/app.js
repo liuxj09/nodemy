@@ -40,7 +40,6 @@ module.exports = function(config){
 	 * @param {String} static files mark, a request which start with this mark will handler by static routes
 	 * @param {String} static files path
 	 */
-	app.use(staticFiles('/static', config.staticPath))
 	if (process.env.NODE_ENV === 'development') {
 		const jcsMark = config.jcsPath.jcsMark
 		app.use(staticFiles(jcsMark, config.staticPathDev))
