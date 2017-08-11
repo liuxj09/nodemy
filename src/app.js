@@ -59,11 +59,17 @@ module.exports = function(config){
 
 	// catch 404
 	app.use(async (ctx, next) => {
-		if (parseInt(ctx.status) === 404 && /\.html$|\/[^\/\.]+$/.test(ctx.request.url)) {
+		if (parseInt(ctx.status) === 404) {
 			debug(`quest url ${ctx.request.url}`)
-			ctx.status = 301
-			ctx.redirect('https://www.' + ctx._host + '/404.html')
-			await next()
+			console.log('----------------------ctx.request.url-----------------------',ctx.request.url);
+			if(ctx.request.url.indexOf('/detail/') >= 0){
+				console.log('----------redirect to detail---------');
+				await config._detail(ctx, next)
+			}else if(ctx.request.url == '/'){
+				console.log('----------redirect to index---------');
+				await config._index(ctx, next)
+			}
+					
 		} else {
 			await next();
 		}
