@@ -65,10 +65,22 @@ module.exports = function(config){
 			if(ctx.request.url.indexOf('/detail/') >= 0){
 				console.log('----------redirect to detail---------');
 				await config._detail(ctx, next)
-			}else if(ctx.request.url == '/'){
+			}else if(ctx.request.url == '/' || ctx.request.url.indexOf('/list-p') >= 0){
 				console.log('----------redirect to index---------');
 				await config._index(ctx, next)
-			}
+			}else if(ctx.request.url.indexOf('/list-key') >= 0){
+				console.log('----------redirect to search---------');
+				await config._search(ctx, next)
+			}else if(ctx.request.url.indexOf('/list-') >= 0){
+				console.log('----------redirect to list---------');
+				await config._list(ctx, next)
+			}else if(ctx.request.url.indexOf('/tag') >= 0){
+				console.log('----------redirect to tag---------');
+				await config._tag(ctx, next)
+			}else if(ctx.request.url.indexOf('zh') >= 0){
+				console.log('----------redirect to zh---------');
+				await config._zh(ctx, next)
+			}			
 					
 		} else {
 			await next();
