@@ -1,6 +1,6 @@
 {
   "name": "nodemy",
-  "version": "1.0.9",
+  "version": "1.1.2",
   "description": "common module of node for mycaigou",
   "main": "index.js",
   "scripts": {
